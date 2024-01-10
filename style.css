@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    font-size: 4rem;
+    margin-top: 3rem;
+    
+}
+h2 {
+    font-size: 2.5rem;
+}
+
+.animation {
+    margin-top: 3rem;
+}
+
+
+p {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.7em;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+del {
+    /*font-weight: 300;*/
+    margin-right: 0.5rem;
+}
+
+.page-container {
+	text-align: center;
+    color: #FFF;
+	background-color: #e74c3c;
+	overflow-x: hidden;
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:nth-child(2n-1){
+	background-color: rgba(0,0,0,0.05);
+}
+
+
+
+/* -------------- clockAnim -------------- */
+
+.clockAnim{
+	border-radius: 60px;
+	border: 3px solid #fff;
+	height: 80px;
+	width: 80px;
+	position: relative;
+
+	top: 28%;
+	top: -webkit-calc(50% - 43px);
+	top: calc(50% - 43px);
+	left: 35%;
+	left: -webkit-calc(50% - 43px);
+	left: calc(50% - 43px);
+}
+.clockAnim:after{
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	top:2px;
+	left: 48%;
+	height: 38px;
+	width: 4px;
+	border-radius: 5px;
+	-webkit-transform-origin: 50% 97%;
+			transform-origin: 50% 97%;
+	-webkit-animation: grdAiguille 2s linear infinite;
+			animation: grdAiguille 2s linear infinite;
+}
+
+@-webkit-keyframes grdAiguille{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes grdAiguille{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.clockAnim:before{
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	top:6px;
+	left: 48%;
+	height: 35px;
+	width: 4px;
+	border-radius: 5px;
+	-webkit-transform-origin: 50% 94%;
+			transform-origin: 50% 94%;
+	-webkit-animation: ptNeedle 12s linear infinite;
+			animation: ptNeedle 12s linear infinite;
+}
+
+@-webkit-keyframes ptNeedle{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes ptNeedle{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
